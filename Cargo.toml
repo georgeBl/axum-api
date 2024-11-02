@@ -1,0 +1,26 @@
+[package]
+name = "axum-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version ="*", features = ["full"]}
+# Axum
+axum = { version ="*", features = ["macros"]}
+tower-http = { version = "*", features = ["fs"]}
+tower-cookies = "*"
+# Serde and Json
+serde_json = "*"
+serde = { version = "1", features = ["derive"]}
+serde_with = "*"
+
+# Other
+lazy-regex = "*"
+async-trait = "*"
+strum_macros = "*"
+uuid = { version= "*", features = [ "v4" , "fast-rng",]}
+
+[dev-dependencies]
+anyhow = "*"
+httpc-test = "*"
+serde_json = "*"
